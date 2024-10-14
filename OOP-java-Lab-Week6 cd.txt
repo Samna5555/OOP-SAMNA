@@ -1,0 +1,65 @@
+class Book {
+    private String title;
+    private String author;
+    private String isbn;
+
+    
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+ 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+}
+public class Book extends Book {
+    private String subject;
+    private int gradeLevel;
+
+   
+    public Book(String title, String author, String isbn, String subject, int gradeLevel) {
+        super(title, author, isbn); 
+        this.subject = subject;
+        this.gradeLevel = gradeLevel;
+    }
+
+  
+    public String getSubject() {
+        return subject;
+    }
+
+    public int getGradeLevel() {
+        return gradeLevel;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public void setGradeLevel(int gradeLevel) {
+        this.gradeLevel = gradeLevel;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       Class.Book Book = null;
+        book = new Class.Book("java programming", "John Doe", "1234567890);
+
+       
+        System.out.println("Title: " + Book.getTitle());
+        System.out.println("Author: " + Book.getAuthor());
+        System.out.println("ISBN: " + Book.getIsbn());
+        
+    }
+}
